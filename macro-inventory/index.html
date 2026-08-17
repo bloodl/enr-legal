@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Documentation — Macro Inventory for Confluence</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
+    max-width: 46rem; margin: 0 auto; padding: 3rem 1.25rem 6rem;
+    color: #1a1a1a; background: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e8e8e8; background: #141414; }
+    code, pre { background: #262626 !important; }
+    hr { border-top-color: #333 !important; }
+    .meta { color: #999 !important; }
+    th { border-bottom-color: #444 !important; }
+    td { border-bottom-color: #2a2a2a !important; }
+  }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .5rem; }
+  h2 { font-size: 1.15rem; margin: 2.25rem 0 .5rem; }
+  .meta { color: #666; font-size: .9rem; margin: 0 0 2rem; }
+  ul, ol { padding-left: 1.25rem; }
+  li { margin-bottom: .4rem; }
+  code { background: #f2f2f2; padding: .1rem .35rem; border-radius: 3px; font-size: .9em; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .95rem; }
+  th { text-align: left; padding: .5rem .6rem; border-bottom: 2px solid #ddd; }
+  td { padding: .5rem .6rem; border-bottom: 1px solid #eee; vertical-align: top; }
+  hr { border: 0; border-top: 1px solid #ddd; margin: 3rem 0 1.5rem; }
+</style>
+</head>
+<body>
+
+<h1>Macro Inventory for Confluence</h1>
+<p class="meta">Documentation &middot; ENR Enterprises AS</p>
+
+<p>
+  Macro Inventory lists every macro used in a Confluence space, how many pages use
+  each one, and which macros fall outside the standard Confluence set.
+</p>
+
+<h2>Getting started</h2>
+<ol>
+  <li>Install the app from the Atlassian Marketplace.</li>
+  <li>In Confluence, open <strong>Apps</strong> in the main navigation and choose
+      <strong>Macro Inventory</strong>.</li>
+  <li>Pick a space from the dropdown and select <strong>Scan space</strong>.</li>
+</ol>
+<p>
+  The scan runs in batches and reports progress as it goes. Larger spaces take longer;
+  a space of a few thousand pages typically completes in under a minute.
+</p>
+
+<h2>Reading the results</h2>
+<table>
+  <tr><th>Column</th><th>Meaning</th></tr>
+  <tr><td>Macro</td><td>The macro name as Confluence stores it.</td></tr>
+  <tr><td>Source</td><td><strong>Built-in</strong> means the macro is part of the standard Confluence set. <strong>Not recognised</strong> means it is not.</td></tr>
+  <tr><td>Pages</td><td>How many pages in the space use that macro. A macro used several times on one page counts once.</td></tr>
+  <tr><td>Examples</td><td>Up to five pages where the macro appears.</td></tr>
+</table>
+
+<h2>What &ldquo;Not recognised&rdquo; means</h2>
+<p>
+  Confluence records the <em>name</em> of a macro but not which app supplies it. A macro
+  marked &ldquo;Not recognised&rdquo; is one that isn&rsquo;t part of the standard
+  Confluence set, which usually means it comes from an installed app &mdash; and pages
+  using it will stop rendering correctly if that app is removed.
+</p>
+<p>
+  Treat the list as a starting point for checking rather than a definitive verdict. If you
+  believe a macro is standard Confluence and it is being reported as unrecognised, tell us
+  and we will correct it.
+</p>
+
+<h2>Permissions and data</h2>
+<ul>
+  <li>The app requests two read-only permissions: read pages and read spaces.</li>
+  <li>Every request is made with <em>your</em> Confluence permissions. You can only scan
+      spaces you can read, and results never include pages you cannot see.</li>
+  <li>The app stores nothing. Results exist only in your browser while the page is open
+      and are gone when you navigate away.</li>
+  <li>No data is sent outside Atlassian. The app declares no external network access and
+      runs entirely on Atlassian-hosted infrastructure.</li>
+  <li>The app never creates, modifies or deletes content.</li>
+</ul>
+
+<h2>Limitations</h2>
+<ul>
+  <li>Scans one space at a time. There is no site-wide scan.</li>
+  <li>Results are not saved. Closing or reloading the page clears them.</li>
+  <li>Macros inside content types other than pages may not be included.</li>
+  <li>The list of standard Confluence macro names is maintained by us and may be
+      incomplete; see &ldquo;Not recognised&rdquo; above.</li>
+</ul>
+
+<h2>Support</h2>
+<p>
+  Questions, problems or corrections:
+  <a href="mailto:info@enrenterprises.com">info@enrenterprises.com</a>
+</p>
+
+<hr>
+<p class="meta">
+  ENR Enterprises AS, Svenskerud 150, 3409 Tranby, Norway &middot;
+  <a href="https://legal.enrenterprises.no/">Privacy policy</a>
+</p>
+
+</body>
+</html>
